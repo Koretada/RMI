@@ -13,7 +13,8 @@ public class Server extends ImpMult {
          Multiplication stub = (Multiplication) UnicastRemoteObject.exportObject(obj, 0);  
          // Liaison de l'objet distant (stub) dans le Registre
          Registry reg = LocateRegistry.getRegistry(); 
-         reg.bind("Multiplier", stub);  
+         //reg.bind("Multiplier", stub);
+         reg.rebind("Multiplier", stub);
          System.out.println("Le Serveur est prêt..."); 
       } catch (Exception e) { 
          System.err.println(e.toString()); 
@@ -21,4 +22,3 @@ public class Server extends ImpMult {
       } 
    } 
 }
-

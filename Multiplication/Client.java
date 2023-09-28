@@ -21,7 +21,8 @@ public class Client {
             System.out.print("Entrez le deuxième nombre: ");
             int nbr2 = scan.nextInt();
             
-            stub.multiplication_a_b(nbr1,nbr2);
+            int reponse = stub.multiplication_a_b(nbr1,nbr2);
+            System.out.println("Le résulat de " + nbr1 + " x " + nbr2 + " = " + reponse);
          } 
          
       } catch (Exception e) {
